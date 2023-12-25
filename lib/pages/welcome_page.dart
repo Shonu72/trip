@@ -48,7 +48,7 @@ class _WelcomePageState extends State<WelcomePage> {
                           text: "Mountain",
                           size: 30,
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         SizedBox(
                           width: 250,
                           child: AppText(
@@ -58,12 +58,12 @@ class _WelcomePageState extends State<WelcomePage> {
                             size: 14,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         ResponsiveButton(
                           width: 100,
-                        )
+                        ),
                       ],
                     ),
                     Column(
