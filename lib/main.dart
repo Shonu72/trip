@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trip/navpages/main_page.dart';
+import 'package:trip/pages/details_page.dart';
 import 'package:trip/pages/welcome_page.dart';
 
 void main() {
@@ -13,12 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Trip App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MainPage(),
+      home: const DetailsPage(),
     );
   }
 }
