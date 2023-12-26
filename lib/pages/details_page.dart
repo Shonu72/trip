@@ -3,6 +3,7 @@ import 'package:trip/misc/colors.dart';
 import 'package:trip/widgets/app_button.dart';
 import 'package:trip/widgets/app_large_text.dart';
 import 'package:trip/widgets/app_text.dart';
+import 'package:trip/widgets/responsive_button.dart';
 
 class DetailsPage extends StatefulWidget {
   const DetailsPage({super.key});
@@ -150,9 +151,43 @@ class _DetailsPageState extends State<DetailsPage> {
                           ),
                         );
                       }),
+                    ),
+                    const SizedBox(height: 20),
+                    AppLargeText(
+                      text: "Description",
+                      color: Colors.black.withOpacity(0.8),
+                      size: 24,
+                    ),
+                    const SizedBox(height: 10),
+                    AppText(
+                      text:
+                          "Manali is a popular tourist destination in India and serves as the gateway to the Lahaul and Spiti district as well as the city of Leh in Ladakh",
                     )
                   ],
                 ),
+              ),
+            ),
+            Positioned(
+              bottom: 20,
+              left: 20,
+              right: 20,
+              child: Row(
+                children: [
+                  AppButtons(
+                    size: 55,
+                    color: AppColors.textColor2,
+                    backgroundcolor: Colors.white,
+                    borderColor: AppColors.textColor2,
+                    icon: Icons.favorite,
+                    isIcon: true,
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  ResponsiveButton(
+                    isResponsive: true,
+                  )
+                ],
               ),
             ),
           ],
