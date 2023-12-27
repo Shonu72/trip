@@ -72,12 +72,13 @@ class _WelcomePageState extends State<WelcomePage> {
                             child: Row(
                               children: [
                                 ResponsiveButton(
-                                  width: 100,
+                                  width: 120,
                                 ),
                               ],
                             ),
                           ),
                         ),
+                   
                       ],
                     ),
                     Column(
