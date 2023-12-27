@@ -161,7 +161,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     const SizedBox(height: 10),
                     AppText(
                       text:
-                          "Manali is a popular tourist destination in India and serves as the gateway to the Lahaul and Spiti district as well as the city of Leh in Ladakh",
+                          "Manali is a popular tourist destination in India and serves as the gateway to the Lahaul and Spiti district as well as the city of Leh in Ladakh. Manali is also known for its apples, and you can buy apple jams, pickles, and apple wine as souvenirs.",
                     )
                   ],
                 ),
