@@ -22,7 +22,9 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: BlocProvider<AppCubit>(
-          create: (context) => AppCubit(data:DataServices()),
+          create: (context) => AppCubit(
+            data: DataServices(),
+          ),
           child: AppCubitLogic(),
         ));
   }
