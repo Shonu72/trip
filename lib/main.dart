@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           create: (context) => AppCubit(
             data: DataServices(),
           ),
-          child: AppCubitLogic(),
+          child: const AppCubitLogic(),
         ));
   }
 }

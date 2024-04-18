@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:trip/model/data_model.dart';
@@ -24,11 +22,11 @@ class AppCubit extends Cubit<CubitState> {
     }
   }
 
-  detailPage(DataModel data){
+  detailPage(DataModel data) {
     emit(DetailedState(data));
   }
 
-  goHome(){
+  goHome() {
     emit(LoadedState(places));
   }
 }

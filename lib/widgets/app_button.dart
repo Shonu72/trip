@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:trip/misc/colors.dart';
 import 'package:trip/widgets/app_text.dart';
 
 class AppButtons extends StatelessWidget {
   final Color color;
   final Color backgroundcolor;
   final Color borderColor;
-  double size;
-  String? text;
-  IconData? icon;
-  bool? isIcon;
+  final double size;
+  final String? text;
+  final IconData? icon;
+  final bool? isIcon;
 
-  AppButtons(
+  const AppButtons(
       {super.key,
       this.isIcon = false,
       this.text = "0",

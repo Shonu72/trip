@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AppLargeText extends StatelessWidget {
-  double size;
+  final double size;
   final String text;
   final Color color;
-   AppLargeText({
+   const AppLargeText({
     super.key, 
      this.size=30, 
     required this.text, 

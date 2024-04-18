@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trip/cubit/app_cubit.dart';
@@ -59,10 +58,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                
                 Container(
                   padding: const EdgeInsets.only(left: 20),
-                  child: AppLargeText(text: "Discover"),
+                  child: const AppLargeText(text: "Discover"),
                 ),
                 const SizedBox(height: 10),
                 Container(
@@ -100,7 +98,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 .detailPage(info[index]);
                           },
                           child: Container(
-                            margin: EdgeInsets.only(right: 10, top: 20),
+                            margin:const EdgeInsets.only(right: 10, top: 20),
                             width: 200,
                             height: 400,
                             decoration: BoxDecoration(
@@ -113,6 +111,40 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 fit: BoxFit.cover,
                               ),
                             ),
+                            // child: Container(
+                            //   width: 200,
+                            //   margin: const EdgeInsets.only(
+                            //     top: 300,
+                            //     left: 5,
+                            //   ),
+                            //   child: Row(
+                            //     mainAxisAlignment: MainAxisAlignment.start,
+                            //     children: [
+                            //       Column(
+                            //         children: [
+                            //           AppLargeText(
+                            //             text: info[index].name,
+                            //             size: 20,
+                            //             color: Colors.white,
+                            //           ),
+                            //           Row(
+                            //             children: [
+                            //               Icon(
+                            //                 Icons.location_pin,
+                            //                 color: AppColors.mainColor,
+                            //               ),
+                            //               const SizedBox(width: 5),
+                            //               AppText(
+                            //                 text: info[index].location,
+                            //                 color: AppColors.textColor1,
+                            //               ),
+                            //             ],
+                            //           ),
+                            //         ],
+                            //       )
+                            //     ],
+                            //   ),
+                            // ),
                           ),
                         );
                       },
@@ -121,13 +153,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     Text("Coming Soon"),
                   ]),
                 ),
+
                 const SizedBox(height: 20),
                 Container(
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      AppLargeText(
+                      const AppLargeText(
                         text: "Explore more",
                         size: 22,
                       ),
@@ -225,8 +258,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
 class CircleTabIndicator extends Decoration {
   final Color color;
-  double radius;
-  CircleTabIndicator({
+  final double radius;
+  const CircleTabIndicator({
     required this.color,
     required this.radius,
   });

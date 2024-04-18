@@ -3,9 +3,9 @@ import 'package:trip/misc/colors.dart';
 import 'package:trip/widgets/app_text.dart';
 
 class ResponsiveButton extends StatelessWidget {
-  double? width;
-  bool? isResponsive;
-  ResponsiveButton({
+  final double? width;
+  final bool? isResponsive;
+  const ResponsiveButton({
     Key? key,
     this.width = 120,
     this.isResponsive = false,
@@ -30,7 +30,7 @@ class ResponsiveButton extends StatelessWidget {
                   ? Container(
                       padding: const EdgeInsets.only(left: 30),
                       child:
-                          AppText(text: "Book Trip Now", color: Colors.white))
+                          const AppText(text: "Book Trip Now", color: Colors.white))
                   : Container(),
               Image.asset("assets/button-one.png"),
             ]),
