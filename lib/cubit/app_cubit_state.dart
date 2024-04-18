@@ -30,3 +30,9 @@ class DetailedState extends CubitState {
   @override
   List<Object> get props => [place];
 }
+
+class PaymentState extends CubitState {
+  PaymentState();
+  @override
+  List<Object> get props => [];
+}

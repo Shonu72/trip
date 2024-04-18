@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         elevation: 0,
         leading: const Icon(
           Icons.menu,
-          color: Colors.black,
+          color: Colors.blue,
         ),
         actions: [
           Container(
@@ -41,11 +41,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             width: 50,
             height: 50,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(40),
               color: Colors.grey,
+              border: Border.all(color: Colors.blue),
               image: const DecorationImage(
-                image: AssetImage("assets/balloning.png"),
+                image: AssetImage("assets/climb.png"),
                 fit: BoxFit.cover,
+                // colorFilter: ColorFilter.mode(
+                //     Colors.black.withOpacity(0.5), BlendMode.darken),
               ),
             ),
           )
@@ -63,25 +66,22 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   child: const AppLargeText(text: "Discover"),
                 ),
                 const SizedBox(height: 10),
-                Container(
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: TabBar(
-                        labelPadding:
-                            const EdgeInsets.only(left: 20, right: 20),
-                        controller: _tabController,
-                        labelColor: Colors.black,
-                        unselectedLabelColor: Colors.grey,
-                        isScrollable: true,
-                        indicatorSize: TabBarIndicatorSize.label,
-                        indicator: CircleTabIndicator(
-                            color: AppColors.mainColor, radius: 4),
-                        tabs: const [
-                          Tab(text: "Places"),
-                          Tab(text: "Inspiration"),
-                          Tab(text: "Emotions"),
-                        ]),
-                  ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: TabBar(
+                      labelPadding: const EdgeInsets.only(left: 20, right: 20),
+                      controller: _tabController,
+                      labelColor: Colors.black,
+                      unselectedLabelColor: Colors.grey,
+                      isScrollable: true,
+                      indicatorSize: TabBarIndicatorSize.label,
+                      indicator: CircleTabIndicator(
+                          color: AppColors.mainColor, radius: 4),
+                      tabs: const [
+                        Tab(text: "Places"),
+                        Tab(text: "Inspiration"),
+                        Tab(text: "Emotions"),
+                      ]),
                 ),
                 Container(
                   margin: const EdgeInsets.only(left: 20),
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 .detailPage(info[index]);
                           },
                           child: Container(
-                            margin:const EdgeInsets.only(right: 10, top: 20),
+                            margin: const EdgeInsets.only(right: 10, top: 20),
                             width: 200,
                             height: 400,
                             decoration: BoxDecoration(
@@ -111,40 +111,34 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            // child: Container(
-                            //   width: 200,
-                            //   margin: const EdgeInsets.only(
-                            //     top: 300,
-                            //     left: 5,
-                            //   ),
-                            //   child: Row(
-                            //     mainAxisAlignment: MainAxisAlignment.start,
-                            //     children: [
-                            //       Column(
-                            //         children: [
-                            //           AppLargeText(
-                            //             text: info[index].name,
-                            //             size: 20,
-                            //             color: Colors.white,
-                            //           ),
-                            //           Row(
-                            //             children: [
-                            //               Icon(
-                            //                 Icons.location_pin,
-                            //                 color: AppColors.mainColor,
-                            //               ),
-                            //               const SizedBox(width: 5),
-                            //               AppText(
-                            //                 text: info[index].location,
-                            //                 color: AppColors.textColor1,
-                            //               ),
-                            //             ],
-                            //           ),
-                            //         ],
-                            //       )
-                            //     ],
-                            //   ),
-                            // ),
+                            child: Container(
+                              width: 200,
+                              margin: const EdgeInsets.only(
+                                top: 300,
+                                left: 5,
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      AppLargeText(
+                                        text: info[index].name,
+                                        size: 20,
+                                        color: Colors.white,
+                                      ),
+                                      AppText(
+                                        text: info[index].location,
+                                        color: Colors.white,
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
                         );
                       },

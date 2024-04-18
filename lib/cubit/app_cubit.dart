@@ -29,4 +29,8 @@ class AppCubit extends Cubit<CubitState> {
   goHome() {
     emit(LoadedState(places));
   }
+
+  paymentPage() {
+    emit(PaymentState());
+  }
 }

@@ -180,6 +180,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   left: 20,
                   right: 20,
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       AppButtons(
                         size: 50,
@@ -192,9 +193,23 @@ class _DetailsPageState extends State<DetailsPage> {
                       const SizedBox(
                         width: 20,
                       ),
-                      const ResponsiveButton(
-                        isResponsive: true,
-                      )
+                      ElevatedButton(
+                          style: ButtonStyle(
+                              minimumSize: MaterialStateProperty.all<Size>(
+                                  const Size(200, 50)),
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(10.0))),
+                              backgroundColor: MaterialStateProperty.all(
+                                  AppColors.mainColor)),
+                          onPressed: () {
+                            BlocProvider.of<AppCubit>(context).paymentPage();
+                          },
+                          child: const Text("Book Trip Now",
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 20))),
                     ],
                   ),
                 ),

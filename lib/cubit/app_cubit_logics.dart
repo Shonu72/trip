@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trip/cubit/app_cubit.dart';
 import 'package:trip/navpages/main_page.dart';
 import 'package:trip/pages/details_page.dart';
+import 'package:trip/pages/payment_page.dart';
 import 'package:trip/pages/welcome_page.dart';
 
 class AppCubitLogic extends StatefulWidget {
@@ -26,6 +27,9 @@ class _AppCubitLogicState extends State<AppCubitLogic> {
           }
           if (state is LoadedState) {
             return const MainPage();
+          }
+          if (state is PaymentState) {
+            return const PaymentPage();
           }
           if (state is LoadingState) {
             return const Center(
