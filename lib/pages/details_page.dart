@@ -182,7 +182,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   child: Row(
                     children: [
                       AppButtons(
-                        size: 55,
+                        size: 50,
                         color: AppColors.textColor2,
                         backgroundcolor: Colors.white,
                         borderColor: AppColors.textColor2,
@@ -192,7 +192,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       const SizedBox(
                         width: 20,
                       ),
-                      ResponsiveButton(
+                      const ResponsiveButton(
                         isResponsive: true,
                       )
                     ],

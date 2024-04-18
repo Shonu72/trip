@@ -29,8 +29,8 @@ class ResponsiveButton extends StatelessWidget {
               isResponsive == true
                   ? Container(
                       padding: const EdgeInsets.only(left: 30),
-                      child:
-                          const AppText(text: "Book Trip Now", color: Colors.white))
+                      child: const AppText(
+                          text: "Book Trip Now", color: Colors.white))
                   : Container(),
               Image.asset("assets/button-one.png"),
             ]),

@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 class ProfileSettingWidget extends StatelessWidget {
   final String text;
   final IconData? icon;
-  const ProfileSettingWidget(
-      {super.key, required this.text,  this.icon});
+  const ProfileSettingWidget({super.key, required this.text, this.icon});
 
   @override
   Widget build(BuildContext context) {
